@@ -1,0 +1,409 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    
+  <div class="container-fluid bg-primary py-5 Home">
+    <div class="container py-5">
+        <div class="row justify-content-center py-5">
+            <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                <h2 class="display-3 text-light animated slideInDown">Maru Gujarat</h2>
+                <p class="text-light">A Glimpse of Gujarat</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div
+            class="col-lg-6 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="min-height: 400px"
+          >
+            <div class="position-relative h-100">
+              <img
+                class="img-fluid position-absolute w-100 h-100 border border-dark"
+                src="{% static 'img/gujarat-map.jpg' %}"
+                alt="Gujarat-img"
+                style="object-fit: cover"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+            <h6 class="section-title bg-white text-start text-primary pe-3">
+              About Us
+            </h6>
+            <h1 class="mb-4">
+              {% comment %} Welcome to <span class="text-primary">Gujarat Tour</span> {% endcomment %}
+              <h2>Gujarat Day - Significance, History</h2>
+            </h1>
+            <p class="mb-4"><strong>Gujarat Day</strong>, observed on May 1, commemorates the
+                formation of Gujarat state in India. Gujarat was carved out of the Bombay State on May 1, 1960,after the
+                Bombay Reorganisation Act, 1960.People of Gujarat celebrate Gujarat Day by attending cultural
+                programs that showcase the heritage of the state.
+            </p>
+            <p class="mb-4">
+              The coastal states of Gujarat and Maharashtra were bifurcated from the Bombay State based on cultural
+              distinctiveness. In this article, we have shared details about Gujarat Day, its history and
+              significance.
+            </p>
+            <div class="row gy-2 gx-4 mb-4">
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Gujarat Famous Temples
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Kutch Tour
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>National Parks
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Best Tour Guide
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>Premium
+                  City Tours
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <p class="mb-0">
+                  <i class="fa fa-arrow-right text-primary me-2"></i>24/7
+                  Service
+                </p>
+              </div>
+            </div>
+            <a class="btn btn-primary py-3 px-5 mt-2" href="https://en.wikipedia.org/wiki/Gujarat" target="_blank" >Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Services
+          </h6>
+          <h1 class="mb-5">Our Services</h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item rounded pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-globe text-primary mb-4"></i>
+                <h5>Gujarat Tours</h5>
+                <p>
+                  We are provide best places or destination in gujarat
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item rounded pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-hotel text-primary mb-4"></i>
+                <h5>Hotel Reservation</h5>
+                <p>
+                  We are also help to book hotel with best benifit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item rounded pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-user text-primary mb-4"></i>
+                <h5>Travel Guides</h5>
+                <p>
+                  We are provide familier tour guide with minimum cost.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="service-item rounded pt-3">
+              <div class="p-4">
+                <i class="fa fa-3x fa-cog text-primary mb-4"></i>
+                <h5>Event Management</h5>
+                <p>
+                  We are help to organige tour , Hotel booking , provide travel.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Service End -->
+
+    <!-- Destination Start -->
+    <div class="container-xxl py-5 destination">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Destination
+          </h6>
+          <h1 class="mb-5">Popular Destination</h1>
+        </div>
+        <div class="row g-3">
+          {% for n in popularDestinaion_data %}
+            <div class="col-lg-4 col-md-6">
+              <div class="row g-3">
+                <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
+                  <a class="position-relative d-block overflow-hidden" href="https://en.wikipedia.org/wiki/{{n.search_name}}" target="_blank" >
+                    <img
+                      class="img-fluid"
+                      src="{{n.image.url}}"
+                      alt="{{n.nameOfImage}}"
+                      style="height:250px;"
+                    />
+                    <div
+                      class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2"
+                    >
+                      {{n.discount}}%
+                    </div>
+                    <div
+                      class="bg-white text-primary fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2"
+                    >
+                    {{n.nameOfImage}}
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- Destination Start -->
+
+    <!-- Package Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Packages
+          </h6>
+          <h1 class="mb-5">Awesome Packages</h1>
+        </div>
+        <div class="row g-4 justify-content-center">
+          {% for n in packages_data %}
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="package-item">
+                <div class="overflow-hidden">
+                  <img class="img-fluid" src="{{n.image.url}}" alt="{{n.search_name}}" style="height:250px;" />
+                </div>
+                <div class="d-flex border-bottom">
+                  <small class="flex-fill text-center border-end py-2"
+                    ><i class="fa fa-map-marker-alt text-primary me-2"></i
+                    >{{n.location}}</small
+                  >
+                  <small class="flex-fill text-center border-end py-2"
+                    ><i class="fa fa-calendar-alt text-primary me-2"></i>{{n.days}}
+                    days</small
+                  >
+                  <small class="flex-fill text-center py-2"
+                    ><i class="fa fa-user text-primary me-2"></i>{{n.person}} Person</small
+                  >
+                </div>
+                <div class="text-center p-4">
+                  <h3 class="mb-0">₹{{n.price}}</h3>
+                  <div class="mb-3">
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                    <small class="fa fa-star text-primary"></small>
+                  </div>
+                  <p>
+                    {{n.heading}}
+                  </p>
+                  <div class="d-flex justify-content-center mb-2">
+                    <a
+                      href="https://en.wikipedia.org/wiki/{{n.search_name}}"
+                      class="btn btn-sm btn-primary px-3 border-end"
+                      style="border-radius: 30px 0 0 30px"
+                      >Read More</a
+                    >
+                    <a
+                      href="BookWithLink/{{n.location}}"
+                      class="btn btn-sm btn-primary px-3"
+                      style="border-radius: 0 30px 30px 0"
+                      >Book Now</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- Package End -->
+
+    {% comment %} Book {% endcomment %}
+
+    {% include "book.html" %}
+
+    <!-- Process Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Process
+          </h6>
+          <h1 class="mb-5">3 Easy Steps</h1>
+        </div>
+        <div class="row gy-5 gx-4 justify-content-center">
+          <div
+            class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="position-relative border border-primary pt-5 pb-4 px-4">
+              <div
+                class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                style="width: 100px; height: 100px"
+              >
+                <i class="fa fa-globe fa-3x text-white"></i>
+              </div>
+              <h5 class="mt-4">Choose A Destination</h5>
+              <hr class="w-25 mx-auto bg-primary mb-1" />
+              <hr class="w-50 mx-auto bg-primary mt-0" />
+              <p class="mb-0">
+                Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
+                diam eos erat ipsum et lorem et sit sed stet lorem sit
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <div class="position-relative border border-primary pt-5 pb-4 px-4">
+              <div
+                class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                style="width: 100px; height: 100px"
+              >
+                <i class="fa fa-dollar-sign fa-3x text-white"></i>
+              </div>
+              <h5 class="mt-4">Pay Online</h5>
+              <hr class="w-25 mx-auto bg-primary mb-1" />
+              <hr class="w-50 mx-auto bg-primary mt-0" />
+              <p class="mb-0">
+                Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
+                diam eos erat ipsum et lorem et sit sed stet lorem sit
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
+            <div class="position-relative border border-primary pt-5 pb-4 px-4">
+              <div
+                class="d-inline-flex align-items-center justify-content-center bg-primary rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                style="width: 100px; height: 100px"
+              >
+                <i class="fa fa-plane fa-3x text-white"></i>
+              </div>
+              <h5 class="mt-4">Fly Today</h5>
+              <hr class="w-25 mx-auto bg-primary mb-1" />
+              <hr class="w-50 mx-auto bg-primary mt-0" />
+              <p class="mb-0">
+                Tempor erat elitr rebum clita dolor diam ipsum sit diam amet
+                diam eos erat ipsum et lorem et sit sed stet lorem sit
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Process Start -->
+
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Travel Guide
+          </h6>
+          <h1 class="mb-5">Meet Our Guide</h1>
+        </div>
+        <div class="row g-4">
+          {% for n in guide_data %}
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item">
+                <div class="overflow-hidden">
+                  <img class="img-fluid" src="{{n.image.url}}" alt="guide_image" style="height:200px;" />
+                </div>
+                <div
+                  class="position-relative d-flex justify-content-center"
+                  style="margin-top: -19px"
+                >
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square mx-1" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+                <div class="text-center p-4">
+                  <h5 class="mb-0">{{ n.name }}</h5>
+                  Experience : <small>{{ n.experience }} Year</small>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- Team End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="container">
+        <div class="text-center">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            Testimonial
+          </h6>
+          <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel position-relative">
+          {% for n in testimonial_data %}
+          <div class="testimonial-item bg-white text-center border p-4">
+            <img
+              class="bg-white rounded-circle shadow p-1 mx-auto mb-3"
+              src="{{n.image.url}}"
+              style="width: 80px; height: 80px"
+            />
+            <h5 class="mb-0">{{n.name}}</h5>
+            <p>{{n.location}}</p>
+            <p class="mb-0">
+              {{n.para}}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+{% endblock content %}

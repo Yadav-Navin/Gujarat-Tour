@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Gujarat Travel | Login{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid p-0" >
+  <div class="profile-page">
+    <div class="container-fluid" >
+      <h1>Login</h1>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item text-decoration-underline"><a href="{% url "index" %}">Home</a></li>
+            <li class="breadcrumb-item active text-light" aria-current="page">Login</li>
+          </ol>
+        </nav>
+    </div>
+
+    <div class="container col-lg-6 col-md-10">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                <br>
+                <a href="{% url 'reset_password' %}" class="btn btn-link">Reset Password</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

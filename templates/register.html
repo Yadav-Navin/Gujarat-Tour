@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% load static %} 
+
+{% block title %}Gujarat Travel | Register{% endblock title %}
+
+{% block content %}
+
+<div class="container-fluid p-0" >
+  <div class="profile-page">
+    <div class="container-fluid" >
+      <h1>Register</h1>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item text-decoration-underline"><a href="{% url "index" %}">Home</a></li>
+            <li class="breadcrumb-item active text-light" aria-current="page">Register</li>
+          </ol>
+        </nav>
+    </div>
+
+    <div class="container col-lg-4 col-md-10">
+      {% if form.errors %}
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>There is an error with your form.</strong>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endif %}
+      <br>
+
+      <div class="shadow p-4 mb-5 bg-body rounded">
+        <form action="{% url 'register' %}" method="POST">
+          {% csrf_token %}
+          <div class="mb-3">{{ form.as_p }}</div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

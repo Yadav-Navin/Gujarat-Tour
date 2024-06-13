@@ -1,0 +1,169 @@
+{% load static %}
+
+<!-- Booking Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+      <div class="booking p-5">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-6 text-white">
+            <h6 class="text-white text-uppercase">Booking</h6>
+            <h1 class="text-white mb-4">Online Booking</h1>
+            <p class="mb-4">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+              Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
+            </p>
+            <p class="mb-4">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+              Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+              sed stet lorem sit clita duo justo magna dolore erat amet
+            </p>
+            <a class="btn btn-outline-light py-3 px-5 mt-2" href=""
+              >Read More</a
+            >
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-white mb-4">Book A Tour</h1>
+            <form action="{% url 'booking' %}" method="post">
+              {% csrf_token %}
+              {% if messages %}
+                {% for message in messages %}
+                <p{% if message.tags %} class="bg-{{ message.tags }} p-3 text-light"{% endif %}>{{ message }}</p>
+                {% endfor %}
+              {% endif %}
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-transparent"
+                      id="name"
+                      name="name"
+                      placeholder="Your Name"
+                    />
+                    <label for="name">Your Name</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control bg-transparent"
+                      id="email"
+                      placeholder="Your Email"
+                    />
+                    <label for="email">Your Email</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="form-floating date"
+                    id="date3"
+                    data-target-input="nearest"
+                  >
+                    <input
+                      type="text"
+                      class="form-control bg-transparent datetimepicker-input"
+                      id="datetime"
+                      placeholder="Date & Time"
+                      name="date"
+                      data-target="#date3"
+                      data-toggle="datetimepicker"
+                    />
+                    <label for="datetime">Date & Time</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <select class="form-select bg-transparent" name="destination" id="select1">
+                      <option value="">Choose an option</option>
+                      <hr />
+                      <optgroup label="Temples">
+                        <option value="Akshardham Gandhinagar">Akshardham Gandhinagar</option>
+                        <option value="Somnath Temple">Somnath Temple</option>
+                        <option value="Dwarika">Dwarika</option>
+                        <option value="Pavagadh">Pavagadh</option>
+                        <option value="Bahucharaji">Bahucharaji</option>
+                        <option value="Ambaji">Ambaji</option>
+                        <option value="Surya Mandir">Surya Mandir</option>
+                        <option value="Santram Mandir ">Santram Mandir </option>
+                        <option value="Hutheesing jain Temple">Hutheesing jain Temple</option>
+                        <option value="Jagarnath Mandir">Jagarnath Mandir</option>
+                        <option value="Kashtbhanjan Dev">Kashtbhanjan Dev</option>
+                      </optgroup>
+                      <hr />
+                      <optgroup label="National Parks">
+                        <option value="Gir National Park">Gir National Park</option>
+                        <option value="Velavadar National Park">Velavadar National Park</option>
+                        <option value="Vansda National Park">Vansda National Park</option>
+                        <option value="Marine National Park">Marine National Park</option>
+                      </optgroup>
+                      <hr />
+                      <optgroup label="Kutch Tour">
+                        <option value="Kalo Dungar">Kalo Dungar</option>
+                        <option value="Harmirsar Lake">Harmirsar Lake</option>
+                        <option value="White Desert of Kutch">White Desert of Kutch</option>
+                        <option value="Mandvi Beach">Mandvi Beach</option>
+                        <option value="Vijay Villas Palace">Vijay Villas Palace</option>
+                        <option value="Bhujio Dingar">Bhujio Dingar</option>
+                        <option value="Siyot Caves">Siyot Caves</option>
+                        <option value="Dhinodhar Hills">Dhinodhar Hills</option>
+                        <option value="Tera Fort">Tera Fort</option>
+                        <option value="Shyamji Krishna Varma Memorial">Shyamji Krishna Varma Memorial</option>
+                        <option value="Prag Mahal">Prag Mahal</option>
+                        <option value="Little Rann Of Kutch">Little Rann Of Kutch</option>
+                        <option value="Aaina Mahal">Aaina Mahal</option>
+                        <option value="Chhatardi Bhuj">Chhatardi Bhuj</option>
+                        <option value="Rann of Kutch">Rann of Kutch</option>
+                        <option value="Dholavira">Dholavira</option>
+                        <option value="Vande Mataram Memorial">Vande Mataram Memorial</option>
+                        <option value="Narayan Sarovar">Narayan Sarovar</option>
+                      </optgroup>
+                    </select>
+                    <label for="select1">Destination</label>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control bg-transparent"
+                      id="contact"
+                      name="contact"
+                      placeholder="Contact"
+                    />
+                    <label for="contact">Contact</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control bg-transparent"
+                      placeholder="Special Request"
+                      id="message"
+                      name="subject"
+                      style="height: 100px"
+                    ></textarea>
+                    <label for="message">Special Request</label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="formFileSm" class="form-label">Uploade your image</label>
+                  <input class="form-control form-control-sm" name="file" id="formFileSm" type="file">
+                </div>
+                <div class="col-12">
+                  <button
+                    class="btn btn-outline-light w-100 py-3"
+                    type="submit"
+                  >
+                    Book Now
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Booking Start -->
