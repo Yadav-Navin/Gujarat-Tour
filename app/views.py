@@ -99,7 +99,7 @@ def BookWithLink(request,location):
 
         subject = 'Touriest information which you can handle'
         message = f'This is your Touriest Which name is {name} and location is {location} and contact is {contact}'
-        recipient_list = ['yadavnain2525@gmail.com',]
+        recipient_list = ['receiver email',]
         attachment_path = 'static/img/contact.jpg'
 
         email = EmailMessage(subject=subject,body=message,from_email=settings.EMAIL_HOST_USER,to=recipient_list)
