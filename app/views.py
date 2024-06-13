@@ -65,7 +65,7 @@ def booking(request):
 
         subject = 'Touriest information which you can handle'
         message = f'This is your Touriest Which name is {name} and location is {destination} and contact is {contact}'
-        recipient_list = ['yadavnain2525@gmail.com',]
+        recipient_list = ['receiver email',]
         attachment_path = 'static/img/man1.jpg'
 
         email = EmailMessage(subject=subject,body=message,from_email=settings.EMAIL_HOST_USER,to=recipient_list)
