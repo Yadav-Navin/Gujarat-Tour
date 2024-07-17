@@ -1,0 +1,115 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Gujarat Travel | Contact{% endblock title %}
+
+{% block content %}
+    <div class="container-fluid bg-primary py-5 mb-5 contact-header">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">BookWithLink</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">BookWithLink</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container col-lg-6 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+        <form action="#" method="post">
+          {% csrf_token %}
+            {% if messages %}
+                {% for message in messages %}
+                <p {% if message.tags %} class="bg-{{ message.tags }} p-3 text-light"{% endif %}>{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+                <div class="row g-3">
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="text"
+                          class="form-control bg-transparent"
+                          id="name"
+                          name="name"
+                          placeholder="Your Name"
+                        />
+                        <label for="name">Your Name</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input
+                          type="email"
+                          name="email"
+                          class="form-control bg-transparent"
+                          id="email"
+                          placeholder="Your Email"
+                        />
+                        <label for="email">Your Email</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="form-floating date"
+                        id="date3"
+                        data-target-input="nearest"
+                      >
+                        <input
+                          type="text"
+                          class="form-control bg-transparent datetimepicker-input"
+                          id="datetime"
+                          placeholder="Date & Time"
+                          name="date"
+                          data-target="#date3"
+                          data-toggle="datetimepicker"
+                        />
+                        <label for="datetime">Date & Time</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control bg-transparent"
+                            id="destination"
+                            name="destination"
+                            placeholder="Destination"
+                            value = {{location}}
+                            readonly
+                          />
+                          <label for="destination">Destination</label>
+                        </div>
+                      </div>
+                    <div class="col-12">
+                      <div class="form-floating">
+                        <textarea
+                          class="form-control bg-transparent"
+                          placeholder="Special Request"
+                          id="message"
+                          name="subject"
+                          style="height: 100px"
+                        ></textarea>
+                        <label for="message">Special Request</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <button
+                        class="btn btn-outline-primary w-100 py-3"
+                        type="submit"
+                      >
+                        Book Now
+                      </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+                
+{% endblock content %}

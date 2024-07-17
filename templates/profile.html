@@ -1,0 +1,57 @@
+{% extends "base.html" %} 
+
+{% load static %}
+
+{% block title %}Gujarat Travel | Profile{% endblock title %}
+
+{% block content %}
+  <div class="container-fluid p-0" >
+    <div class="profile-page">
+      <div class="container-fluid" >
+        <h1>Profile</h1>
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item text-decoration-underline"><a href="{% url 'index' %}">Home</a></li>
+              <li class="breadcrumb-item active text-light" aria-current="page">Profile</li>
+            </ol>
+          </nav>
+      </div>
+      <h2 class="text-center text-white bg-danger py-3">Welcome, {{ user.username }} !</h2>
+      <div class="container col-lg-6">
+
+        <!-- Profile Page Start -->
+          <div class="row">
+            <div class="col">
+              <p>First Name : <input type="text" class="form-control" value="{{ user.UserProfile.fname }}" readonly ></p>
+              <p>Last Name : <input type="text" class="form-control" value="{{ user.userprofile.lname }}" readonly ></p>
+              <p>Biography : <input type="text" class="form-control" value="{{ user.userprofile.bio }}" readonly ></p> 
+              <p>Email : <input type="text" class="form-control" value="{{ user.userprofile.email }}" readonly ></p> 
+              <p>Birthdate : <input type="text" class="form-control" value="{{ user.userprofile.birthdate }}" readonly ></p>
+              <p>Contact : <input type="text" class="form-control" value="{{ user.userprofile.contact }}" readonly ></p>
+              <p>Gender : <input type="text" class="form-control" value="{{ user.userprofile.gender }}" readonly ></p> 
+              <p>Address : <input type="text" class="form-control" value="{{ user.userprofile.address }}" readonly ></p>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col">
+              <a href="{% url 'edit_profile_user' %}" class="btn btn-info"
+                >Edit Profile</a
+              >
+            </div>
+            <div class="col">
+                {% if user.is_authenticated %}
+                  <a href="{% url 'change_password' %}" class="btn btn-primary btn-sm"
+                    >Change Password</a
+                  >
+                  |
+                  <a href="{% url 'logout' %}" class="btn btn-danger btn-sm">Logout</a>
+                {% endif %}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- Privacy End -->
+
+{% endblock content %}
